@@ -44,10 +44,10 @@ export default function Legal({ posts }) {
                 <div className="card mt-5 mb-5 p-3">
                   <Link key={`${post.slug}`} href={`/blog/${post.slug}`}>
                       <a>
-                          <div className='mb-4'>
-                              <h1 className='text-xl py-3'>{post.frontMatter.title}</h1>
-                              <p>{post.frontMatter.metaDesc}</p>
-                          </div>
+                        <div className='mb-4'>
+                          <h1 className='text-xl py-3'>{post.frontMatter.title}</h1>
+                          <p>{post.frontMatter.metaDesc}</p>
+                        </div>
                       </a>
                   </Link>
                   </div>

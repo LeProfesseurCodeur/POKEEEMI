@@ -42,10 +42,7 @@ function BlogPage({ frontMatter, content }) {
       </Head>
       <div className='p-10'>
         <h1 className='text-2xl py-4'>{frontMatter.title}</h1>
-        <article
-          className='prose lg:prose-xl'
-          dangerouslySetInnerHTML={{ __html: md().render(content) }}
-        />
+        <article className='prose lg:prose-xl' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
       </div>
     </Container>
   );

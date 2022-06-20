@@ -4,7 +4,6 @@ import styles from "../styles/Home.module.css";
 import ContactForm from "../Components/Contact-form";
 import { motion } from 'framer-motion'
 
-
 export default function Contact() {
     return (
       <div className={styles.container}>
@@ -16,29 +15,29 @@ export default function Contact() {
         </Head>
   
         <main>
-        <div className="container">
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <motion.div initial="hidden" animate="visible" variants={{
-                hidden: {
-                    scale: .8,
-                    opacity: 0
-                },
-                visible: {
-                    scale: 1,
-                    opacity: 1, 
-                    transition: {
-                    delay: .4
+          <div className="container">
+            <div className={styles.grid}>
+              <div className={styles.card}>
+                <motion.div initial="hidden" animate="visible" variants={{
+                    hidden: {
+                        scale: .8,
+                        opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1, 
+                      transition: {
+                        delay: .4
+                      }
                     }
-                }
-            }}>
-                <h3 className={styles.title}>Nous contacter</h3> 
-            </motion.div>
-            
-            <ContactForm />
+                }}>
+                  <h3 className={styles.title}>Nous contacter</h3> 
+                </motion.div>
+                
+                <ContactForm />
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
         </main>
   
         <footer className={styles.footer}>

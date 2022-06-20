@@ -2,7 +2,6 @@ import { Box, Grid, Typography } from "@mui/material";
 import numeral from "numeral";
 
 function Biography(props) {
-
   const {
     height,
     weight,

@@ -53,14 +53,11 @@ function Pokemon({ pokemonData, speciesData }) {
     genera,
     growth_rate,
   } = speciesData;
-
   const fullId = generateID(id);
   const image = sprites.other["official-artwork"].front_default;
   const typesArray = types.map((type) => type.type.name);
-  const species = genera?.find((genus) => genus.language.name === "en").genus;
-
+  const species = genera?.find((genus) => genus.language.name === "fr").genus;
   const [value, setValue] = useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -206,7 +203,6 @@ export async function getServerSideProps({ query }) {
   const { id } = query;
   const pokemonRes = await fetch(`${pokemonEndPoint}${id}`);
   const pokemonData = await pokemonRes.json();
-
   const speciesRes = await fetch(`${speciesEndPoint}${id}`);
   const speciesData = await speciesRes.json();
 
